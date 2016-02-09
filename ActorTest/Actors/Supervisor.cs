@@ -2,15 +2,12 @@
 using Akka.Actor;
 using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace ActorTest.Actors
 {
     public class Supervisor : ReceiveActor
     {
-        private const int ACTOR_TIMEOUT = (1000 * 10);      //SECONDS
+        private const int ACTOR_TIMEOUT = (1000 * 15);      //SECONDS
         private IDictionary<String, ICancelable> _cancelableActors;
         public static Props Create()
         {
